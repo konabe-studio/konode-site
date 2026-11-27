@@ -192,6 +192,21 @@ behind the 12px filename in the code bar. Do not reuse a light-palette tone on
 the dark panel without re-measuring it; the two ramps move in opposite
 directions.
 
+### Status marks
+
+The compatibility page marks each cell with a shape in a tinted circle, so a mark reads
+without its colour too. Three of the tints are new; the "works" mark reuses the accent pair.
+
+| Token | Value | Contrast | Use |
+| --- | --- | --- | --- |
+| `--warn-text` | `#8a5a00` | 5.58 : 1 on `--bg`, 5.93 : 1 on white | "Works with a limitation" |
+| `--warn-bg` | `#fdf1dc` | 5.30 : 1 under `--warn-text` | Behind that mark |
+| `--danger-bg` | `#fdeceb` | 5.75 : 1 under `--danger-text` | Behind the "does not work" mark |
+
+The works mark is `--accent-solid` on `--bg-card-sel` (4.35 : 1). Not possible is
+`--fg-muted` in an outline, and not tested is a `--fg-subtle` dash with no circle, so the
+cells nobody has measured stay quiet.
+
 ### Accent
 
 | Token | Value | Use |

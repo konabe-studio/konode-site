@@ -181,6 +181,106 @@ main.doc { max-width: calc(var(--maxw-text) + 2 * var(--gutter)); }
   color: var(--fg);
 }
 
+/* ---------- Browser compatibility (generated into compatibility.html) ---------- */
+/* The page is a matrix first and prose second, so it is the one doc page wider than
+   the prose measure: the tables get --maxw, and the text runs between them sit in a
+   centred .col at --maxw-text, where the text column is on the other doc pages. */
+main.doc.compat-page { max-width: calc(var(--maxw) + 2 * var(--gutter)); }
+.compat-page .col { max-width: var(--maxw-text); margin-left: auto; margin-right: auto; }
+/* The introduction is several paragraphs, all of them lead text: kept together. */
+.compat-page .lead + .lead { margin-top: var(--s-3); }
+
+.vh {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip-path: inset(50%); white-space: nowrap;
+}
+
+/* A mark is a shape and a colour, so it reads without the colour too. Each carries its
+   word for a screen reader and a title for the pointer. */
+.mk {
+  /* Positioned so its hidden word (.vh) is placed inside the table's scroll shell. Left
+     static, the word was placed against the page, and pushed it 400px wide on a phone. */
+  position: relative;
+  display: inline-flex; align-items: center; justify-content: center; flex: none;
+  width: 24px; height: 24px; border-radius: 50%; vertical-align: middle;
+}
+.mk svg {
+  width: 16px; height: 16px;
+  fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+}
+.mk-ok { color: var(--accent-solid); background: var(--bg-card-sel); }
+.mk-lim { color: var(--warn-text); background: var(--warn-bg); }
+.mk-no { color: var(--danger-text); background: var(--danger-bg); }
+.mk-na { color: var(--fg-muted); border: 1px solid var(--border-strong); }
+.mk-tbd { color: var(--fg-subtle); }
+
+.mk-key {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-btn);
+  padding: var(--s-5); margin: var(--s-6) 0;
+}
+.mk-legend {
+  list-style: none; padding: 0; margin: 0;
+  display: grid; gap: var(--s-3) var(--s-5); grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+}
+.mk-legend li { display: flex; align-items: center; gap: var(--s-3); margin: 0; font-size: var(--fs-sm); }
+.mk-key p { margin: var(--s-4) 0 0; font-size: var(--fs-sm); color: var(--fg-muted); }
+
+/* The table scrolls inside its own shell; the page never does. It runs a little wider
+   than the text, and no wider: across the full --maxw, a browser's name and its marks
+   were too far apart to read along the row. */
+.compat-scroll {
+  max-width: calc(var(--maxw-text) + 2 * var(--s-9));
+  overflow-x: auto; margin: var(--s-5) auto var(--s-6);
+  background: var(--bg-card); border: 1px solid var(--border-hair); border-radius: var(--r-card);
+}
+table.compat { width: 100%; border-collapse: separate; border-spacing: 0; font-size: var(--fs-sm); }
+table.compat th, table.compat td {
+  padding: var(--s-2); border-bottom: 1px solid var(--border);
+  text-align: center; vertical-align: middle;
+}
+table.compat tbody tr:last-child > * { border-bottom: 0; }
+table.compat thead th {
+  background: var(--bg-card-sel); padding-top: var(--s-3); padding-bottom: var(--s-3);
+  font-size: var(--fs-xs); font-weight: 600; line-height: 1.3;
+}
+/* The browser column stays put while the marks scroll under it on a phone. */
+table.compat tr > :first-child {
+  position: sticky; left: 0; z-index: 1;
+  min-width: 10rem; padding-left: var(--s-4); text-align: left;
+  background: var(--bg-card);
+}
+table.compat thead tr > :first-child { background: var(--bg-card-sel); }
+table.compat tbody tr:hover > * { background: var(--bg-subtle); }
+table.compat th[scope="row"] { font-weight: 600; line-height: 1.35; }
+table.compat th[scope="row"] a { color: var(--fg); text-decoration: none; }
+table.compat th[scope="row"] a:hover { text-decoration: underline; }
+.compat-page .eng {
+  display: block; margin: 0;
+  font-family: var(--font-mono); font-size: var(--fs-xs); font-weight: 400; color: var(--fg-subtle);
+}
+table.compat td.stop { text-align: left; color: var(--fg-muted); }
+
+/* The engine comparison is words rather than marks. */
+table.compat-text td { text-align: left; vertical-align: top; min-width: 12rem; color: var(--fg-muted); }
+table.compat-text th[scope="row"] { vertical-align: top; }
+table.compat-text thead th { text-align: left; }
+
+/* One note per browser, under its table. */
+.compat-page .cn-title { margin-top: var(--s-6); }
+.cn { border-top: 1px solid var(--border); }
+.cn-item { display: grid; gap: var(--s-2) var(--s-5); padding: var(--s-5) 0; border-bottom: 1px solid var(--border); }
+@media (min-width: 700px) { .cn-item { grid-template-columns: 10rem 1fr; } }
+.cn-head h3 { margin: 0; font-size: var(--fs-body); }
+.cn-item:target .cn-head h3 { color: var(--accent-solid); }
+.cn-body p { margin-bottom: var(--s-2); font-size: var(--fs-sm); color: var(--fg-muted); }
+.cn-body p:last-child { margin-bottom: 0; }
+.cn-body .cn-route { color: var(--fg); }
+.cn-route span {
+  margin-right: var(--s-2);
+  font-family: var(--font-mono); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--fg-subtle);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after {

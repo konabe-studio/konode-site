@@ -63,14 +63,22 @@ jobs:
           # api.github.com only, never to the two stores.
           GITHUB_TOKEN: ${{ github.token }}
 
+      # compatibility.html renders COMPATIBILITY.md from the extension repo: every mark and
+      # note is a cell or a paragraph there, so it needs no judgment and can run unattended.
+      # The script refuses to write when the file is not in the shape it knows, and that
+      # failure must not cost the store versions their refresh, so it only warns here.
+      - name: Rewrite the compatibility tables
+        continue-on-error: true
+        run: node scripts/sync-compat.mjs
+
       - name: Commit only if something moved
         run: |
           git config user.name "konode-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/status.json roadmap.html
+          git add data/status.json roadmap.html compatibility.html
           if git diff --cached --quiet; then
             echo "Nothing moved."
             exit 0
           fi
-          git commit -m "chore(site): store versions refreshed"
+          git commit -m "chore(site): store versions and compatibility refreshed"
           git push

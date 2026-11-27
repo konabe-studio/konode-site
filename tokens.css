@@ -70,6 +70,9 @@
   --accent-link: #0e9d5a;   /* 3.3:1, large text only: the hero h1 highlight, nothing else */
   --on-accent: #ffffff;
   --danger-text: #b42318;   /* the counterpart for "no" on the doc pages, 6.2:1 on --bg */
+  --danger-bg: #fdeceb;     /* behind --danger-text in a "does not work" mark, 5.75:1 */
+  --warn-text: #8a5a00;     /* "works with a limitation": 5.58:1 on --bg, 5.93:1 on white */
+  --warn-bg: #fdf1dc;       /* behind --warn-text in its mark, 5.30:1 */
 
   /* ---------------------------------------------------------- dark panel -- */
   --d-bg: #0f1216;
