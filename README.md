@@ -20,6 +20,7 @@ with no inline handlers, so `vercel.json` keeps `script-src 'self'`.
 | `setup.html` | Setup guide: installing, connecting each backend, encryption, second device |
 | `troubleshooting.html` | Common failures and fixes |
 | `roadmap.html` | What's shipped, in progress, planned, and explicitly not planned |
+| `compatibility.html` | Which browsers run Konode and what syncs on each. The tables and notes are generated from the extension repo's `COMPATIBILITY.md` by `scripts/sync-compat.mjs`, which `refresh-status.yml` runs daily; edit the Markdown there, not the page |
 | `privacy.html` | Privacy policy — the URL used by the Google OAuth consent screen and the Chrome Web Store listing |
 
 The four doc pages still run on `docs.css`, a copy of the previous stylesheet.

@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Browser compatibility. Which browsers run Konode | Konode</title>
+  <meta name="description" content="Which browsers run Konode, on desktop, Android and iOS, and what syncs on each: bookmarks, open tabs, history, the extension list, and each kind of storage. Tested, with a note per browser." />
+  <link rel="canonical" href="https://konode.org/compatibility.html" />
+  <link rel="icon" href="icon.svg?v=2" type="image/svg+xml" />
+  <link rel="icon" href="icon128.png?v=2" sizes="128x128" />
+  <link rel="apple-touch-icon" href="icon128.png?v=2" />
+  <meta name="theme-color" content="#f7f8fa" />
+  <link rel="preload" href="fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="tokens.css?v=4" />
+  <link rel="stylesheet" href="header.css?v=3" />
+  <link rel="stylesheet" href="docs.css?v=4" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Konode" />
+  <meta property="og:url" content="https://konode.org/compatibility.html" />
+  <meta property="og:title" content="Browser compatibility. Which browsers run Konode | Konode" />
+  <meta property="og:description" content="Which browsers run Konode, and what syncs on each, with a note per browser." />
+  <meta property="og:image" content="https://konode.org/og.png?v=1" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:alt" content="Konode. Sync your browser to storage you own." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script src="konode.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="index.html"><img src="icon.svg" alt="" /> Konode</a>
+
+    <nav class="primary-nav" aria-label="Primary navigation">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#storage">Storage</a>
+      <a href="index.html#privacy">Privacy</a>
+      <a href="setup.html">Setup</a>
+      <a href="https://github.com/konabe-studio/konode" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.3c-3.3.7-4-1.4-4-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.4c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z"/></svg>
+        GitHub
+      </a>
+    </nav>
+
+    <details class="mobile-nav">
+      <summary aria-label="Open navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M4 5h16" /><path d="M4 12h16" /><path d="M4 19h16" />
+        </svg>
+      </summary>
+      <nav aria-label="Mobile navigation">
+        <a class="m-install js-install" href="https://chromewebstore.google.com/detail/konode/mmlfiiimnpnjcjhhbldenpcmnibedkfa" target="_blank" rel="noopener noreferrer">Add to <span class="js-browser">Chrome</span> for free</a>
+        <a href="index.html">Home</a>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#storage">Storage</a>
+        <a href="index.html#privacy">Privacy</a>
+        <a href="index.html#compare">Compare</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="features.html">Feature guide</a>
+        <a href="setup.html">Setup guide</a>
+        <a href="compatibility.html" aria-current="page">Compatibility</a>
+        <a href="troubleshooting.html">Troubleshooting</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="https://github.com/konabe-studio/konode" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
+    </details>
+
+    <a class="header-cta js-install" href="https://chromewebstore.google.com/detail/konode/mmlfiiimnpnjcjhhbldenpcmnibedkfa" target="_blank" rel="noopener noreferrer">
+      <img class="js-browser-logo" src="assets/chrome.svg" alt="" />
+      <span>Add to <span class="js-browser">Chrome</span></span>
+      <svg class="ext" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M11.3333 10V4.66667H6M11.3333 4.66667L4.66667 11.3333" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </header>
+
+  <main id="main" class="wrap doc compat-page">
+    <div class="col"><h1>Browser compatibility</h1></div>
+    <!-- compat:start: generated by scripts/sync-compat.mjs from COMPATIBILITY.md; edit that, not this -->
+    <div class="col">
+    <p class="lead">Konode works through the browser's extension APIs, so a browser that installs it but leaves an API out can't sync that data type. Bookmarks need <code>bookmarks</code>, open tabs need <code>tabs</code>, history needs <code>history</code>, the extension list needs <code>management</code>, and Google Drive sign-in needs <code>identity.launchWebAuthFlow</code>. GitHub and WebDAV need nothing beyond a network request. This page tracks what each browser actually does, not only whether it installs.</p>
+    <p class="lead">Each table is followed by a note per browser: where to install Konode from, what was tested and when, and anything to watch for.</p>
+    <p class="lead">Dropbox and Gitea / Forgejo storage are new in 1.7.0 and have no column yet. Dropbox signs in through the same browser window as Google Drive, and a Gitea or Forgejo server needs a permission for its address the way a WebDAV server does, so those two columns are the best guide until they get their own.</p>
+    <p class="updated">Last updated: 2026-11-27 · Konode version: 1.6.0, unless a note says otherwise</p>
+    <nav class="toc" aria-label="On this page">
+      <h2>On this page</h2>
+      <ol>
+        <li><a href="#desktop">Desktop</a></li>
+        <li><a href="#android">Android</a></li>
+        <li><a href="#ios">iOS</a></li>
+        <li><a href="#engines">What differs by engine</a></li>
+        <li><a href="#checklist">Test checklist (per browser)</a></li>
+        <li><a href="#report">Reporting a browser</a></li>
+      </ol>
+    </nav>
+    <div class="mk-key" aria-label="What the marks mean">
+    <ul class="mk-legend">
+      <li><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span> Works: tested here, or confirmed by a user (the browser's note says which)</li>
+      <li><span class="mk mk-lim" title="Works with a limitation"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 4.5v4"/><path d="M8 11.5v.01"/></svg><span class="vh">Works with a limitation</span></span> Works with a limitation (the browser's note says what)</li>
+      <li><span class="mk mk-no" title="Does not work"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 5l6 6M11 5l-6 6"/></svg><span class="vh">Does not work</span></span> Tested, does not work</li>
+      <li><span class="mk mk-na" title="Not possible on this browser"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="5"/><path d="M4.5 11.5l7-7"/></svg><span class="vh">Not possible on this browser</span></span> Not possible on this browser (the API or the install route is missing)</li>
+      <li><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span> Not tested yet</li>
+    </ul>
+      <p>A blank cell means the row stops earlier: Konode can't be installed there at all.</p>
+    </div>
+
+    <h2 id="desktop">Desktop</h2>
+    </div>
+    <div class="compat-scroll" role="region" aria-label="Desktop browsers" tabindex="0">
+      <table class="compat">
+        <thead><tr><th scope="col">Browser</th><th scope="col">Install</th><th scope="col">Bookmarks</th><th scope="col">Open tabs</th><th scope="col">History</th><th scope="col">Extension list</th><th scope="col">Google Drive</th><th scope="col">GitHub</th><th scope="col">WebDAV</th></tr></thead>
+        <tbody>
+          <tr><th scope="row"><a href="#desktop-google-chrome">Google Chrome</a><span class="eng">Chromium</span></th><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td></tr>
+          <tr><th scope="row"><a href="#desktop-brave">Brave</a><span class="eng">Chromium</span></th><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td></tr>
+          <tr><th scope="row"><a href="#desktop-helium">Helium</a><span class="eng">Chromium</span></th><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td></tr>
+          <tr><th scope="row"><a href="#desktop-microsoft-edge">Microsoft Edge</a><span class="eng">Chromium</span></th><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td></tr>
+          <tr><th scope="row"><a href="#desktop-norton-neo">Norton Neo</a><span class="eng">Chromium</span></th><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-lim" title="Works with a limitation"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 4.5v4"/><path d="M8 11.5v.01"/></svg><span class="vh">Works with a limitation</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td></tr>
+          <tr><th scope="row"><a href="#desktop-vivaldi">Vivaldi</a><span class="eng">Chromium</span></th><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-lim" title="Works with a limitation"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 4.5v4"/><path d="M8 11.5v.01"/></svg><span class="vh">Works with a limitation</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td></tr>
+          <tr><th scope="row"><a href="#desktop-opera">Opera</a><span class="eng">Chromium</span></th><td><span class="mk mk-lim" title="Works with a limitation"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 4.5v4"/><path d="M8 11.5v.01"/></svg><span class="vh">Works with a limitation</span></span></td><td><span class="mk mk-lim" title="Works with a limitation"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 4.5v4"/><path d="M8 11.5v.01"/></svg><span class="vh">Works with a limitation</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td></tr>
+          <tr><th scope="row"><a href="#desktop-ungoogled-chromium">ungoogled-chromium</a><span class="eng">Chromium</span></th><td><span class="mk mk-lim" title="Works with a limitation"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 4.5v4"/><path d="M8 11.5v.01"/></svg><span class="vh">Works with a limitation</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-no" title="Does not work"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 5l6 6M11 5l-6 6"/></svg><span class="vh">Does not work</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td></tr>
+          <tr><th scope="row"><a href="#desktop-yandex-browser">Yandex Browser</a><span class="eng">Chromium</span></th><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td></tr>
+          <tr><th scope="row"><a href="#desktop-thorium">Thorium</a><span class="eng">Chromium</span></th><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td></tr>
+          <tr><th scope="row"><a href="#desktop-firefox">Firefox</a><span class="eng">Gecko</span></th><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td></tr>
+          <tr><th scope="row"><a href="#desktop-waterfox">Waterfox</a><span class="eng">Gecko</span></th><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td></tr>
+          <tr><th scope="row"><a href="#desktop-zen">Zen</a><span class="eng">Gecko</span></th><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-lim" title="Works with a limitation"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 4.5v4"/><path d="M8 11.5v.01"/></svg><span class="vh">Works with a limitation</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td></tr>
+          <tr><th scope="row"><a href="#desktop-orion">Orion (macOS)</a><span class="eng">WebKit</span></th><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-lim" title="Works with a limitation"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 4.5v4"/><path d="M8 11.5v.01"/></svg><span class="vh">Works with a limitation</span></span></td><td><span class="mk mk-lim" title="Works with a limitation"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 4.5v4"/><path d="M8 11.5v.01"/></svg><span class="vh">Works with a limitation</span></span></td><td><span class="mk mk-lim" title="Works with a limitation"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 4.5v4"/><path d="M8 11.5v.01"/></svg><span class="vh">Works with a limitation</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td></tr>
+          <tr><th scope="row"><a href="#desktop-zephium">Zephium</a><span class="eng">Own runtime</span></th><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col">
+    <h3 class="cn-title">Notes, browser by browser</h3>
+    <div class="cn">
+      <section class="cn-item" id="desktop-google-chrome" aria-labelledby="desktop-google-chrome-h">
+        <div class="cn-head">
+          <h3 id="desktop-google-chrome-h">Google Chrome</h3>
+          <p class="eng">Chromium</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Chrome Web Store</p>
+          <p>Tested here, and the browser most of Konode's users run</p>
+        </div>
+      </section>
+      <section class="cn-item" id="desktop-brave" aria-labelledby="desktop-brave-h">
+        <div class="cn-head">
+          <h3 id="desktop-brave-h">Brave</h3>
+          <p class="eng">Chromium</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Chrome Web Store</p>
+          <p>Tested here. QA pass, Brave 157, 2026-11-09 (WebDAV). Drive: three-device group with Firefox and Helium, 1.2.0</p>
+        </div>
+      </section>
+      <section class="cn-item" id="desktop-helium" aria-labelledby="desktop-helium-h">
+        <div class="cn-head">
+          <h3 id="desktop-helium-h">Helium</h3>
+          <p class="eng">Chromium</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Chrome Web Store</p>
+          <p>Tested here. QA pass, Helium 0.21.1.1, 2026-11-09 (WebDAV) and 2026-09-29 (Drive)</p>
+        </div>
+      </section>
+      <section class="cn-item" id="desktop-microsoft-edge" aria-labelledby="desktop-microsoft-edge-h">
+        <div class="cn-head">
+          <h3 id="desktop-microsoft-edge-h">Microsoft Edge</h3>
+          <p class="eng">Chromium</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Edge Add-ons, or the Chrome Web Store</p>
+          <p>Tested here. Drive sign-in from the Edge Add-ons install, 2026-11-06. Edge 142 renumbered its bookmark roots, handled since 1.5.1 (<a href="https://github.com/konabe-studio/konode/issues/66">#66</a>). A long history slowed the browser down at every sync; 1.6.0 and 1.7.0 cut most of that work (<a href="https://github.com/konabe-studio/konode/issues/96">#96</a>)</p>
+        </div>
+      </section>
+      <section class="cn-item" id="desktop-norton-neo" aria-labelledby="desktop-norton-neo-h">
+        <div class="cn-head">
+          <h3 id="desktop-norton-neo-h">Norton Neo</h3>
+          <p class="eng">Chromium</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Chrome Web Store</p>
+          <p>QA, 2026-09-29. Neo stores a <code>chrome://</code> bookmark under its own <code>neo://</code> name; Konode treats the two as one since 1.4.0 (<a href="https://github.com/konabe-studio/konode/issues/41">#41</a>)</p>
+        </div>
+      </section>
+      <section class="cn-item" id="desktop-vivaldi" aria-labelledby="desktop-vivaldi-h">
+        <div class="cn-head">
+          <h3 id="desktop-vivaldi-h">Vivaldi</h3>
+          <p class="eng">Chromium</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Chrome Web Store</p>
+          <p>Tested here, Vivaldi 8.3 (Chromium 156) with Konode 1.6.0, 2026-11-23: from the Chrome Web Store on Koofr and Google Drive against Thorium (open tabs both ways, restore, a tab sent to Vivaldi), and against a Chromium device on WebDAV (bookmarks, history, the extension list, a tab sent from Vivaldi). Vivaldi shows a folder of its own choosing as the bookmark bar, so your other browsers' bar arrives one level up until you make Vivaldi's Bookmarks folder the bar (<a href="https://github.com/konabe-studio/konode/blob/main/TROUBLESHOOTING.md#vivaldi">how</a>). A bookmark deleted on Vivaldi goes to Vivaldi's Trash, which extensions see as a move, so the deletion does not reach your other devices; deletions made elsewhere do arrive. From 1.7.0 Vivaldi's deletions arrive too. Vivaldi's starter bookmarks (Home, Shopping, Travel and the rest) sync like any other</p>
+        </div>
+      </section>
+      <section class="cn-item" id="desktop-opera" aria-labelledby="desktop-opera-h">
+        <div class="cn-head">
+          <h3 id="desktop-opera-h">Opera</h3>
+          <p class="eng">Chromium</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Chrome Web Store, through Opera's &quot;Install Chrome Extensions&quot;</p>
+          <p>Tested here, Opera 140 (Chromium 157) with Konode 1.6.0, 2026-11-23: installed from the Chrome Web Store through &quot;Install Chrome Extensions&quot;; against a Chromium device on WebDAV, every data type and Send to device, both ways; then on Koofr, Google Drive and GitHub against Thorium, Send to device included. Your other browsers' bar lands on Opera's bookmark bar. A bookmark deleted on Opera goes to Opera's Trash, which extensions see as a move, so the deletion does not reach your other devices; deletions made elsewhere do arrive. From 1.7.0 Opera's deletions arrive too (<a href="https://github.com/konabe-studio/konode/blob/main/TROUBLESHOOTING.md#opera">what to do on an older version</a>)</p>
+        </div>
+      </section>
+      <section class="cn-item" id="desktop-ungoogled-chromium" aria-labelledby="desktop-ungoogled-chromium-h">
+        <div class="cn-head">
+          <h3 id="desktop-ungoogled-chromium-h">ungoogled-chromium</h3>
+          <p class="eng">Chromium</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Chrome Web Store, after the steps on <code>chrome://ungoogled-first-run/</code> (the chromium-web-store helper)</p>
+          <p>Tested here, ungoogled-chromium 157 with Konode 1.6.0, 2026-11-23: against a Chromium device on WebDAV, every data type and Send to device, both ways; then installed from the Web Store and on GitHub against Thorium, Send to device included. ungoogled-chromium can't install from the Web Store out of the box: it takes the helper its first-run page describes. Google Drive can't sign in there: ungoogled-chromium rewrites the sign-in return address to one Google can't accept (<a href="https://github.com/konabe-studio/konode/blob/main/TROUBLESHOOTING.md#ungoogled-chromium">why</a>); use GitHub or WebDAV</p>
+        </div>
+      </section>
+      <section class="cn-item" id="desktop-yandex-browser" aria-labelledby="desktop-yandex-browser-h">
+        <div class="cn-head">
+          <h3 id="desktop-yandex-browser-h">Yandex Browser</h3>
+          <p class="eng">Chromium</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Chrome Web Store</p>
+          <p>Tested here, Yandex 26.11 (Chromium 154) with Konode 1.6.0, 2026-11-23 and 24: installed from the Chrome Web Store, then on Google Drive and GitHub against Thorium, and on Koofr (WebDAV). Bookmarks added on the bar travel both ways, and so do their deletions; Yandex deletes outright, with no Trash in between. Tabs sent with Send to device open both ways, Yandex publishes its open tabs, and history travels both ways. The other devices' extension lists arrive; Yandex had no extension besides Konode, so it had none to send. Yandex shows extensions one more bookmark root, its Collections under the name Favorites, which Konode files with the bookmarks bar; it was empty here</p>
+        </div>
+      </section>
+      <section class="cn-item" id="desktop-thorium" aria-labelledby="desktop-thorium-h">
+        <div class="cn-head">
+          <h3 id="desktop-thorium-h">Thorium</h3>
+          <p class="eng">Chromium</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Chrome Web Store</p>
+          <p>Tested here, Thorium 156 with Konode 1.6.0, 2026-11-23: against a Chromium device on WebDAV, every data type and Send to device, both ways; and from the Chrome Web Store on Koofr against Vivaldi, then on Google Drive and GitHub</p>
+        </div>
+      </section>
+      <section class="cn-item" id="desktop-firefox" aria-labelledby="desktop-firefox-h">
+        <div class="cn-head">
+          <h3 id="desktop-firefox-h">Firefox</h3>
+          <p class="eng">Gecko</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Firefox Add-ons</p>
+          <p>Tested here. QA pass, Firefox 159, 2026-11-09 (WebDAV). Drive: three-device group, 1.2.0. History keeps each page's original visit date</p>
+        </div>
+      </section>
+      <section class="cn-item" id="desktop-waterfox" aria-labelledby="desktop-waterfox-h">
+        <div class="cn-head">
+          <h3 id="desktop-waterfox-h">Waterfox</h3>
+          <p class="eng">Gecko</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Firefox Add-ons</p>
+          <p>Tested here, first on Waterfox 140 with Konode 1.0.2 (2026-07)</p>
+        </div>
+      </section>
+      <section class="cn-item" id="desktop-zen" aria-labelledby="desktop-zen-h">
+        <div class="cn-head">
+          <h3 id="desktop-zen-h">Zen</h3>
+          <p class="eng">Gecko</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Firefox Add-ons</p>
+          <p>Tested here, Zen 1.24.3b (Firefox 160) with Konode 1.6.0, 2026-11-23: against a Chromium device on WebDAV, every data type and Send to device, both ways; then installed from Firefox Add-ons, on Google Drive and GitHub against Thorium, a tab sent from Thorium included. History keeps each page's original visit date. Only the workspace in front shares its open tabs, because Zen hides the others from extensions (<a href="https://github.com/konabe-studio/konode/blob/main/TROUBLESHOOTING.md#zen">why</a>)</p>
+        </div>
+      </section>
+      <section class="cn-item" id="desktop-orion" aria-labelledby="desktop-orion-h">
+        <div class="cn-head">
+          <h3 id="desktop-orion-h">Orion (macOS)</h3>
+          <p class="eng">WebKit</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Chrome Web Store or Firefox Add-ons, from inside Orion</p>
+          <p>User reports on Orion RC (<a href="https://github.com/konabe-studio/konode/issues/7">#7</a>, <a href="https://github.com/konabe-studio/konode/issues/9">#9</a>, <a href="https://github.com/konabe-studio/konode/issues/24">#24</a>). In August Orion RC had no <code>history.search</code> or <code>management.getAll</code>; not re-checked since. Drive: Konode fixed its side on 2026-09-08 (#24), not re-tested</p>
+        </div>
+      </section>
+      <section class="cn-item" id="desktop-zephium" aria-labelledby="desktop-zephium-h">
+        <div class="cn-head">
+          <h3 id="desktop-zephium-h">Zephium</h3>
+          <p class="eng">Own runtime</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Chrome Web Store, from inside Zephium</p>
+          <p>Built on WebView2 on Windows and WebKit on macOS, it runs Chrome extensions on its own extension runtime, not on Chromium, so each API depends on what Zephium has built. Its install screen lists the APIs it does not provide</p>
+        </div>
+      </section>
+    </div>
+
+    <h2 id="android">Android</h2>
+    </div>
+    <div class="compat-scroll" role="region" aria-label="Android browsers" tabindex="0">
+      <table class="compat">
+        <thead><tr><th scope="col">Browser</th><th scope="col">Install</th><th scope="col">Bookmarks</th><th scope="col">Open tabs</th><th scope="col">History</th><th scope="col">Extension list</th><th scope="col">Google Drive</th><th scope="col">GitHub</th><th scope="col">WebDAV</th></tr></thead>
+        <tbody>
+          <tr><th scope="row"><a href="#android-firefox-for-android">Firefox for Android</a><span class="eng">Gecko</span></th><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-na" title="Not possible on this browser"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="5"/><path d="M4.5 11.5l7-7"/></svg><span class="vh">Not possible on this browser</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-na" title="Not possible on this browser"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="5"/><path d="M4.5 11.5l7-7"/></svg><span class="vh">Not possible on this browser</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-na" title="Not possible on this browser"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="5"/><path d="M4.5 11.5l7-7"/></svg><span class="vh">Not possible on this browser</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td></tr>
+          <tr><th scope="row"><a href="#android-iceraven">Iceraven</a><span class="eng">Gecko</span></th><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-na" title="Not possible on this browser"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="5"/><path d="M4.5 11.5l7-7"/></svg><span class="vh">Not possible on this browser</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-na" title="Not possible on this browser"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="5"/><path d="M4.5 11.5l7-7"/></svg><span class="vh">Not possible on this browser</span></span></td><td><span class="mk mk-lim" title="Works with a limitation"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 4.5v4"/><path d="M8 11.5v.01"/></svg><span class="vh">Works with a limitation</span></span></td><td><span class="mk mk-na" title="Not possible on this browser"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="5"/><path d="M4.5 11.5l7-7"/></svg><span class="vh">Not possible on this browser</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td></tr>
+          <tr><th scope="row"><a href="#android-ironfox">IronFox</a><span class="eng">Gecko</span></th><td><span class="mk mk-lim" title="Works with a limitation"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 4.5v4"/><path d="M8 11.5v.01"/></svg><span class="vh">Works with a limitation</span></span></td><td><span class="mk mk-na" title="Not possible on this browser"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="5"/><path d="M4.5 11.5l7-7"/></svg><span class="vh">Not possible on this browser</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-na" title="Not possible on this browser"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="5"/><path d="M4.5 11.5l7-7"/></svg><span class="vh">Not possible on this browser</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-na" title="Not possible on this browser"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="5"/><path d="M4.5 11.5l7-7"/></svg><span class="vh">Not possible on this browser</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td></tr>
+          <tr><th scope="row"><a href="#android-fennec">Fennec</a><span class="eng">Gecko</span></th><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-na" title="Not possible on this browser"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="5"/><path d="M4.5 11.5l7-7"/></svg><span class="vh">Not possible on this browser</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-na" title="Not possible on this browser"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="5"/><path d="M4.5 11.5l7-7"/></svg><span class="vh">Not possible on this browser</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-na" title="Not possible on this browser"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="5"/><path d="M4.5 11.5l7-7"/></svg><span class="vh">Not possible on this browser</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td></tr>
+          <tr><th scope="row"><a href="#android-quetta">Quetta</a><span class="eng">Chromium</span></th><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td></tr>
+          <tr><th scope="row"><a href="#android-vivaldi">Vivaldi</a><span class="eng">Chromium</span></th><td><span class="mk mk-lim" title="Works with a limitation"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 4.5v4"/><path d="M8 11.5v.01"/></svg><span class="vh">Works with a limitation</span></span></td><td><span class="mk mk-lim" title="Works with a limitation"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 4.5v4"/><path d="M8 11.5v.01"/></svg><span class="vh">Works with a limitation</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td></tr>
+          <tr><th scope="row"><a href="#android-microsoft-edge">Microsoft Edge (stable)</a><span class="eng">Chromium</span></th><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td></tr>
+          <tr><th scope="row"><a href="#android-microsoft-edge-canary">Microsoft Edge Canary</a><span class="eng">Chromium</span></th><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td></tr>
+          <tr><th scope="row"><a href="#android-bare-browser">Bare Browser</a><span class="eng">Chromium</span></th><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td></tr>
+          <tr><th scope="row"><a href="#android-titanium">Titanium (formerly Helium for Android)</a><span class="eng">Chromium</span></th><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td></tr>
+          <tr><th scope="row"><a href="#android-cromite">Cromite</a><span class="eng">Chromium</span></th><td><span class="mk mk-lim" title="Works with a limitation"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 4.5v4"/><path d="M8 11.5v.01"/></svg><span class="vh">Works with a limitation</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-no" title="Does not work"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 5l6 6M11 5l-6 6"/></svg><span class="vh">Does not work</span></span></td><td><span class="mk mk-no" title="Does not work"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 5l6 6M11 5l-6 6"/></svg><span class="vh">Does not work</span></span></td><td><span class="mk mk-no" title="Does not work"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 5l6 6M11 5l-6 6"/></svg><span class="vh">Does not work</span></span></td><td><span class="mk mk-no" title="Does not work"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 5l6 6M11 5l-6 6"/></svg><span class="vh">Does not work</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-no" title="Does not work"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 5l6 6M11 5l-6 6"/></svg><span class="vh">Does not work</span></span></td></tr>
+          <tr><th scope="row"><a href="#android-lemur">Lemur</a><span class="eng">Chromium</span></th><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td></tr>
+          <tr><th scope="row"><a href="#android-yandex-browser">Yandex Browser</a><span class="eng">Chromium</span></th><td><span class="mk mk-lim" title="Works with a limitation"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 4.5v4"/><path d="M8 11.5v.01"/></svg><span class="vh">Works with a limitation</span></span></td><td><span class="mk mk-lim" title="Works with a limitation"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 4.5v4"/><path d="M8 11.5v.01"/></svg><span class="vh">Works with a limitation</span></span></td><td><span class="mk mk-no" title="Does not work"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 5l6 6M11 5l-6 6"/></svg><span class="vh">Does not work</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-no" title="Does not work"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 5l6 6M11 5l-6 6"/></svg><span class="vh">Does not work</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td></tr>
+          <tr><th scope="row"><a href="#android-mises">Mises</a><span class="eng">Chromium</span></th><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td></tr>
+          <tr><th scope="row"><a href="#android-chromium-desktop-android-build">Chromium &quot;Desktop Android&quot; build</a><span class="eng">Chromium</span></th><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td></tr>
+          <tr><th scope="row"><a href="#android-google-chrome">Google Chrome</a><span class="eng">Chromium</span></th><td><span class="mk mk-na" title="Not possible on this browser"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="5"/><path d="M4.5 11.5l7-7"/></svg><span class="vh">Not possible on this browser</span></span></td><td class="stop" colspan="7">No extension support</td></tr>
+          <tr><th scope="row"><a href="#android-samsung-internet">Samsung Internet</a><span class="eng">Chromium</span></th><td><span class="mk mk-na" title="Not possible on this browser"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="5"/><path d="M4.5 11.5l7-7"/></svg><span class="vh">Not possible on this browser</span></span></td><td class="stop" colspan="7">Curated add-ons only, no Web Store, no sideloading</td></tr>
+          <tr><th scope="row"><a href="#android-brave-opera-thorium-duckduckgo">Brave, Opera, Thorium, DuckDuckGo</a><span class="eng">Chromium</span></th><td><span class="mk mk-na" title="Not possible on this browser"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="5"/><path d="M4.5 11.5l7-7"/></svg><span class="vh">Not possible on this browser</span></span></td><td class="stop" colspan="7">No extension support</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col">
+    <h3 class="cn-title">Notes, browser by browser</h3>
+    <div class="cn">
+      <section class="cn-item" id="android-firefox-for-android" aria-labelledby="android-firefox-for-android-h">
+        <div class="cn-head">
+          <h3 id="android-firefox-for-android-h">Firefox for Android</h3>
+          <p class="eng">Gecko</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Firefox Add-ons</p>
+          <p>QA, Firefox 158 on Android 15, 2026-10-26 (Koofr, end-to-end encryption on); then installed from Firefox Add-ons on GitHub against Thorium, 2026-11-23: open tabs restored both ways, Send to device both ways (a received tab opens in the background). No <code>bookmarks</code>, <code>history</code> or <code>identity</code> API, so Settings offers only open tabs and the extension list. No permission prompts: allow them in the add-on's Permissions screen (<a href="https://github.com/konabe-studio/konode/blob/main/TROUBLESHOOTING.md#firefox-for-android">details</a>)</p>
+        </div>
+      </section>
+      <section class="cn-item" id="android-iceraven" aria-labelledby="android-iceraven-h">
+        <div class="cn-head">
+          <h3 id="android-iceraven-h">Iceraven</h3>
+          <p class="eng">Gecko</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Firefox Add-ons</p>
+          <p>Tested here, Iceraven 2.53.1 (Gecko 160) on the Android 15 emulator with Konode 1.6.0 from Firefox Add-ons, 2026-11-24, against a Chromium device on WebDAV: open tabs and their restore, Send to device and the extension list, both ways. The same GeckoView limits as Firefox for Android: no <code>bookmarks</code>, <code>history</code> or <code>identity</code> API, and no permission prompts, so allow them on the add-on's Permissions screen (Settings → Extensions → Konode → Permissions); a WebDAV server on the internet needs &quot;Allow for all sites&quot; there. Iceraven reports its built-in Mozilla Android Components add-ons as ordinary extensions, so Konode sends them in the extension list as if you had installed them</p>
+        </div>
+      </section>
+      <section class="cn-item" id="android-ironfox" aria-labelledby="android-ironfox-h">
+        <div class="cn-head">
+          <h3 id="android-ironfox-h">IronFox</h3>
+          <p class="eng">Gecko</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Firefox Add-ons, after Settings → IronFox settings → Security → &quot;Allow installation of add-ons&quot;</p>
+          <p>IronFox 160.0.1 on the Android 15 emulator, 2026-11-24: add-ons cannot be installed until that setting is on; then Konode installs from Firefox Add-ons. IronFox does not grant an add-on's host permissions at install, so on Konode's Permissions screen even the GitHub and Google addresses start switched off. The sync steps were not run here: IronFox has no remote debugging setting, and on the x86_64 test emulator its renderer crashed twice while Konode's setup changed pages, so the setup could not be finished. It needs a real phone; the engine is the one Iceraven runs</p>
+        </div>
+      </section>
+      <section class="cn-item" id="android-fennec" aria-labelledby="android-fennec-h">
+        <div class="cn-head">
+          <h3 id="android-fennec-h">Fennec</h3>
+          <p class="eng">Gecko</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Firefox Add-ons</p>
+          <p>Same GeckoView limits as Firefox for Android</p>
+        </div>
+      </section>
+      <section class="cn-item" id="android-quetta" aria-labelledby="android-quetta-h">
+        <div class="cn-head">
+          <h3 id="android-quetta-h">Quetta</h3>
+          <p class="eng">Chromium</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Chrome Web Store, Edge Add-ons</p>
+          <p>Drive works on a current Quetta: confirmed by a user, 2026-09-19 (<a href="https://github.com/konabe-studio/konode/issues/24">#24</a>, <a href="https://github.com/konabe-studio/konode/issues/37">#37</a>). Older versions loaded the sign-in redirect as a page. Quetta ships arm64 only and crashes at launch on the x86_64 test emulator, so the rest needs a real phone</p>
+        </div>
+      </section>
+      <section class="cn-item" id="android-vivaldi" aria-labelledby="android-vivaldi-h">
+        <div class="cn-head">
+          <h3 id="android-vivaldi-h">Vivaldi</h3>
+          <p class="eng">Chromium</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Chrome Web Store, with &quot;Always Show Desktop Site&quot; on (Settings → Content Settings)</p>
+          <p>Tested here, Vivaldi 8.3 (Chromium 156) on the Android 15 emulator with Konode 1.6.0, 2026-11-24, against a Chromium device on WebDAV: open tabs and their restore, history and Send to device both ways, bookmarks added on either side arrive on the other, and the other device's extension list arrives (Vivaldi had no extension besides Konode, so it had none to send). Then on Google Drive and GitHub with end-to-end encryption, open tabs only: both read every other device's tabs and upload Vivaldi's own. The Google sign-in opens in a Vivaldi window and comes back signed in. The store page offers &quot;Add to Vivaldi&quot; only with Always Show Desktop Site on, and while it is on, Konode's own pages lay out at desktop width and show next to nothing, so turn it off again once Konode is installed. Vivaldi 8.3 shows the permission prompt, which 8.2 did not. A bookmark deleted on Vivaldi goes to Vivaldi's Trash, which extensions see as a move, so the deletion does not reach your other devices; deletions made elsewhere do arrive, and land in Vivaldi's Trash. Your other browsers' bar lands in Vivaldi's Bookmarks folder</p>
+        </div>
+      </section>
+      <section class="cn-item" id="android-microsoft-edge" aria-labelledby="android-microsoft-edge-h">
+        <div class="cn-head">
+          <h3 id="android-microsoft-edge-h">Microsoft Edge (stable)</h3>
+          <p class="eng">Chromium</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Edge Add-ons, from inside Edge</p>
+          <p>Edge for Android installs only listed Edge Add-ons; Konode is listed there since 1.5.1. Not measured: Edge ships arm64 only, and on the x86_64 test emulator Edge 158 installs from Google Play but crashes at launch (2026-11-23)</p>
+        </div>
+      </section>
+      <section class="cn-item" id="android-microsoft-edge-canary" aria-labelledby="android-microsoft-edge-canary-h">
+        <div class="cn-head">
+          <h3 id="android-microsoft-edge-canary-h">Microsoft Edge Canary</h3>
+          <p class="eng">Chromium</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Edge Add-ons, by ID or CRX</p>
+          <p>Developer options: tap the build number five times. Crashes at launch on the x86_64 test emulator, like Edge</p>
+        </div>
+      </section>
+      <section class="cn-item" id="android-bare-browser" aria-labelledby="android-bare-browser-h">
+        <div class="cn-head">
+          <h3 id="android-bare-browser-h">Bare Browser</h3>
+          <p class="eng">Chromium</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Chrome Web Store, CRX</p>
+          <p>Ships arm64 only: on the x86_64 test emulator it installs from Google Play but crashes at launch (2026-11-23), so it needs a real phone</p>
+        </div>
+      </section>
+      <section class="cn-item" id="android-titanium" aria-labelledby="android-titanium-h">
+        <div class="cn-head">
+          <h3 id="android-titanium-h">Titanium (formerly Helium for Android)</h3>
+          <p class="eng">Chromium</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Chrome Web Store, CRX or ZIP</p>
+        </div>
+      </section>
+      <section class="cn-item" id="android-cromite" aria-labelledby="android-cromite-h">
+        <div class="cn-head">
+          <h3 id="android-cromite-h">Cromite</h3>
+          <p class="eng">Chromium</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Chrome Web Store, with the tab's &quot;Desktop site&quot; on (browser menu)</p>
+          <p>Tested here, Cromite 153 (the x86_64 build from its GitHub releases) on the Android 15 emulator with Konode 1.6.0, 2026-11-24. Extensions are on out of the box; the store page offers &quot;Add to Chrome&quot; once the tab shows the desktop site. Cromite never shows a permission prompt and its extension settings cannot grant one, so nothing that needs an optional permission works: open tabs, history, the extension list, and WebDAV, whose server address needs one. Konode's setup says so when the prompt does not come. Google Drive's sign-in crashes Cromite: its sign-in window fails to start. On GitHub with end-to-end encryption, bookmarks travel: the other devices' bookmarks arrive under Other bookmarks, the only bookmark root Cromite shows besides its Tabs collection, and a bookmark added on Cromite is uploaded, as is its deletion; Cromite deletes outright</p>
+        </div>
+      </section>
+      <section class="cn-item" id="android-lemur" aria-labelledby="android-lemur-h">
+        <div class="cn-head">
+          <h3 id="android-lemur-h">Lemur</h3>
+          <p class="eng">Chromium</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Chrome Web Store, Edge Add-ons</p>
+        </div>
+      </section>
+      <section class="cn-item" id="android-yandex-browser" aria-labelledby="android-yandex-browser-h">
+        <div class="cn-head">
+          <h3 id="android-yandex-browser-h">Yandex Browser</h3>
+          <p class="eng">Chromium</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Chrome Web Store, from the store's desktop page (browser menu → &quot;Go to the desktop version&quot;)</p>
+          <p>Installed on Yandex 26.11, Android 15 emulator, 2026-11-23: the mobile store page only says to switch to Chrome, so the install takes the store's desktop version, where &quot;Add to Chrome&quot; is; setup then offers all four data types. With Open tabs on, Konode 1.6.0 crashes Yandex's extension process at every sync: Yandex grants the <code>tabGroups</code> permission but has no such API, and reading it is fatal there. Konode's pages crash with it. Without Open tabs it runs: set up that way on GitHub against Thorium, 2026-11-24, it sent a tab to Thorium and took in a bookmark added there, and turning Open tabs on afterwards brought the crash straight back. Yandex for Android shows extensions two bookmark roots, Mobile and Favorites (on the desktop, Favorites is Yandex's Collections), so what your other browsers keep on the bar and in Other bookmarks lands together in Favorites. Yandex's bookmark screen lists everything directly in Favorites as a folder: a bookmark kept loose there opens as an empty folder, while bookmarks inside folders show normally. Bookmarks you add on Yandex go to Mobile, and on a desktop browser they arrive in Other bookmarks, because desktop Chromium hides its Mobile bookmarks folder from extensions while it is empty. Bookmarks and their deletions travel both ways; a bookmark deleted on Yandex is deleted outright, with no Trash in between. History travels both ways too. So does the extension list. &quot;Open all&quot; opens the store's mobile pages, so switch each to the desktop version to install. Koofr (WebDAV) connects and syncs. After Konode had been turned off and back on, its pages showed message keys (<code>opt_nav_backend</code> and the like) instead of text; restarting Yandex brought the text back. Google Drive does not connect: Yandex refuses the sign-in within a second, before any Google page opens, so Konode reports that the sign-in window closed. Still so after a restart, 2026-11-24</p>
+        </div>
+      </section>
+      <section class="cn-item" id="android-mises" aria-labelledby="android-mises-h">
+        <div class="cn-head">
+          <h3 id="android-mises-h">Mises</h3>
+          <p class="eng">Chromium</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Chrome Web Store</p>
+          <p>Ships arm64 only: on the x86_64 test emulator Mises (Chromium 141, from Google Play) starts, but every page crashes, its own settings pages and the Chrome Web Store included (2026-11-24), so it needs a real phone</p>
+        </div>
+      </section>
+      <section class="cn-item" id="android-chromium-desktop-android-build" aria-labelledby="android-chromium-desktop-android-build-h">
+        <div class="cn-head">
+          <h3 id="android-chromium-desktop-android-build-h">Chromium &quot;Desktop Android&quot; build</h3>
+          <p class="eng">Chromium</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Chrome Web Store, CRX</p>
+          <p>An experimental Google build, not the Chrome from the Play Store</p>
+        </div>
+      </section>
+      <section class="cn-item" id="android-google-chrome" aria-labelledby="android-google-chrome-h">
+        <div class="cn-head">
+          <h3 id="android-google-chrome-h">Google Chrome</h3>
+          <p class="eng">Chromium</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Nowhere: no extension support</p>
+          <p>No extension support</p>
+        </div>
+      </section>
+      <section class="cn-item" id="android-samsung-internet" aria-labelledby="android-samsung-internet-h">
+        <div class="cn-head">
+          <h3 id="android-samsung-internet-h">Samsung Internet</h3>
+          <p class="eng">Chromium</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Galaxy Store only</p>
+          <p>Curated add-ons only, no Web Store, no sideloading</p>
+        </div>
+      </section>
+      <section class="cn-item" id="android-brave-opera-thorium-duckduckgo" aria-labelledby="android-brave-opera-thorium-duckduckgo-h">
+        <div class="cn-head">
+          <h3 id="android-brave-opera-thorium-duckduckgo-h">Brave, Opera, Thorium, DuckDuckGo</h3>
+          <p class="eng">Chromium</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Nowhere: no extension support</p>
+          <p>No extension support</p>
+        </div>
+      </section>
+    </div>
+
+    <h2 id="ios">iOS</h2>
+    </div>
+    <div class="compat-scroll" role="region" aria-label="iOS browsers" tabindex="0">
+      <table class="compat">
+        <thead><tr><th scope="col">Browser</th><th scope="col">Install</th><th scope="col">Bookmarks</th><th scope="col">Open tabs</th><th scope="col">History</th><th scope="col">Extension list</th><th scope="col">Google Drive</th><th scope="col">GitHub</th><th scope="col">WebDAV</th></tr></thead>
+        <tbody>
+          <tr><th scope="row"><a href="#ios-orion">Orion</a><span class="eng">WebKit</span></th><td><span class="mk mk-lim" title="Works with a limitation"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 4.5v4"/><path d="M8 11.5v.01"/></svg><span class="vh">Works with a limitation</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-no" title="Does not work"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 5l6 6M11 5l-6 6"/></svg><span class="vh">Does not work</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col">
+    <h3 class="cn-title">Notes, browser by browser</h3>
+    <div class="cn">
+      <section class="cn-item" id="ios-orion" aria-labelledby="ios-orion-h">
+        <div class="cn-head">
+          <h3 id="ios-orion-h">Orion</h3>
+          <p class="eng">WebKit</p>
+        </div>
+        <div class="cn-body">
+          <p class="cn-route"><span>Install from</span> Chrome Web Store or Firefox Add-ons, from inside Orion</p>
+          <p>Field test against Brave on one WebDAV folder with end-to-end encryption, 2026-08-11. Drive sign-in fails inside Orion's own API bridge. Setup did not open by itself on a first install; since 1.3.0 the popup opens it with a click, which has not been run on a device yet. See the <a href="https://github.com/konabe-studio/konode/blob/main/ROADMAP.md#not-supported-but-closer-than-it-was-ios--webkit">ROADMAP</a></p>
+        </div>
+      </section>
+    </div>
+
+    <h2 id="engines">What differs by engine</h2>
+    </div>
+    <div class="compat-scroll" role="region" aria-label="What differs by engine" tabindex="0">
+      <table class="compat compat-text">
+        <thead><tr><td></td><th scope="col">Chromium</th><th scope="col">Firefox (desktop)</th><th scope="col">Firefox for Android</th><th scope="col">Orion (WebKit)</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">History from other devices</th><td>Arrives dated at the sync</td><td>Keeps the original visit date</td><td>Not available</td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td></tr>
+          <tr><th scope="row">Tab groups</th><td>Restored, with names and colours once Konode may read them</td><td>Restored where the browser has groups (Firefox 138 and later)</td><td>Restored ungrouped</td><td>Restored ungrouped</td></tr>
+          <tr><th scope="row">Send to device: sending</th><td>Right-click a page or a link, or the popup</td><td>Also from a tab's own menu</td><td>From the popup</td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td></tr>
+          <tr><th scope="row">Send to device: receiving</th><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-ok" title="Works"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 8.5l2.5 2.5L12 5.5"/></svg><span class="vh">Works</span></span></td><td><span class="mk mk-tbd" title="Not tested yet"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5.5 8h5"/></svg><span class="vh">Not tested yet</span></span></td></tr>
+          <tr><th scope="row">Google Drive sign-in</th><td>PKCE flow, works on every desktop Chromium browser, not only Chrome. On Android it works on Quetta and Vivaldi, not on Yandex, and crashes Cromite</td><td>Same flow</td><td>Not available</td><td>Fails on iOS</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col">
+
+    <h2 id="checklist">Test checklist (per browser)</h2>
+    <ol class="steps">
+      <li>Install from the store, or sideload the CRX or the unpacked build.</li>
+      <li>Setup opens on first run, or the popup offers to finish it.</li>
+      <li>Connect each storage provider: Google Drive, Dropbox, GitHub, Gitea or Forgejo, WebDAV.</li>
+      <li>Push: bookmarks, open tabs, history and the extension list reach the storage.</li>
+      <li>Pull: data from another device appears in the right place (bookmarks bar, other bookmarks, mobile bookmarks).</li>
+      <li>Send a tab to the device and from it.</li>
+      <li>Survives a browser restart: still installed, still signed in, still syncing.</li>
+      <li>The popup and Settings are usable on a phone screen.</li>
+    </ol>
+
+    <h2 id="report">Reporting a browser</h2>
+    <p>Tested Konode on a browser that isn't listed, or found a ⏳ that you can fill in? <a href="https://github.com/konabe-studio/konode/issues/new">Open an issue</a> with the browser name and version, the operating system, the Konode version, the storage you used, and which checklist steps passed. A short &quot;it works&quot; for one row helps too.</p>
+    </div>
+    <!-- compat:end -->
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="top">
+        <div>
+          <a class="brand" href="index.html"><img src="icon.svg" alt="" /> Konode</a>
+          <p class="about">
+            An independent, open-source project by <b>Kōnabe Studio</b>. Not
+            affiliated with Google, GitHub, Mozilla, or any storage provider.
+          </p>
+        </div>
+        <div class="links">
+          <a href="features.html">Features</a>
+          <a href="setup.html">Setup</a>
+          <a href="compatibility.html">Compatibility</a>
+          <a href="troubleshooting.html">Troubleshooting</a>
+          <a href="roadmap.html">Roadmap</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="https://chromewebstore.google.com/detail/konode/mmlfiiimnpnjcjhhbldenpcmnibedkfa">Chrome Web Store</a>
+          <a href="https://github.com/konabe-studio/konode">GitHub</a>
+          <span class="lic">MPL-2.0</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
