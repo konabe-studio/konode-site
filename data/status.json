@@ -1,11 +1,11 @@
 {
   "firefox": {
-    "version": "1.6.0",
+    "version": "1.7.0",
     "listedSince": "2026-08-04",
     "url": "https://addons.mozilla.org/firefox/addon/konode/"
   },
   "chrome": {
-    "version": "1.6.0",
+    "version": "1.7.0",
     "publishedOn": "2026-07-20",
     "url": "https://chromewebstore.google.com/detail/konode/mmlfiiimnpnjcjhhbldenpcmnibedkfa"
   },
@@ -14,6 +14,6 @@
     "listedSince": "2026-11-06",
     "url": "https://microsoftedge.microsoft.com/addons/detail/acmngpjfommajbkfbfmdfemlheiamfoe"
   },
-  "latestRelease": "v1.6.0",
-  "checkedOn": "2026-11-25"
+  "latestRelease": "v1.7.0",
+  "checkedOn": "2026-11-27"
 }
