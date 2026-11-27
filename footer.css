@@ -1,0 +1,67 @@
+/* The site footer, the same on every page. Loaded after tokens.css, so it uses the tokens.
+
+   Until 2026-11-27 the landing page and the doc pages each had a footer of their own, in
+   style.css and docs.css, with different links and different words. The doc pages put
+   nine links and the licence in one row, which broke into three ragged lines on a phone
+   and ran out of room on a laptop once Compatibility joined. Now the links sit in three
+   labelled groups, so a new page has an obvious place and the row never grows. */
+
+.site-footer {
+  margin-top: var(--s-8);
+  padding: var(--s-8) 0 var(--s-6);
+  border-top: 1px solid var(--border);
+}
+
+/* A phone: the brand across the top, then the groups two to a row. */
+.footer-grid {
+  display: grid;
+  gap: var(--s-6) var(--s-5);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.footer-about { grid-column: 1 / -1; }
+/* A tablet: all three groups in one row, under the brand. */
+@media (min-width: 640px) {
+  .footer-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+/* The brand beside the three groups once there is room for four columns. */
+@media (min-width: 900px) {
+  .footer-grid { grid-template-columns: minmax(0, 2fr) repeat(3, minmax(0, 1fr)); }
+  .footer-about { grid-column: auto; }
+}
+
+.site-footer .brand {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--font-display); font-size: var(--fs-h3); font-weight: 600;
+  letter-spacing: -0.02em; color: var(--fg); text-decoration: none;
+}
+.site-footer .brand img { width: 26px; height: 26px; border-radius: var(--r-sm); flex: none; }
+.footer-about p {
+  margin: var(--s-3) 0 0; max-width: 36ch;
+  font-size: var(--fs-sm); line-height: 1.6; color: var(--fg-muted);
+}
+.footer-about b { font-weight: 600; color: var(--fg); }
+
+.footer-h {
+  margin: 0 0 var(--s-3);
+  font-family: var(--font-mono); font-size: var(--fs-xs); font-weight: 400;
+  text-transform: uppercase; letter-spacing: 0.1em; color: var(--fg-subtle);
+}
+.footer-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-2); }
+.footer-col a, .footer-bottom a {
+  color: var(--fg-muted); font-size: var(--fs-sm); text-decoration: none;
+  transition: color var(--dur) var(--ease);
+}
+.footer-col a:hover, .footer-bottom a:hover { color: var(--fg); text-decoration: underline; }
+
+.footer-bottom {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s-2) var(--s-5);
+  margin-top: var(--s-7); padding-top: var(--s-5);
+  border-top: 1px solid var(--border-hair);
+  font-size: var(--fs-xs); color: var(--fg-muted);
+}
+.footer-bottom p { margin: 0; }
+.footer-bottom a { font-size: var(--fs-xs); font-family: var(--font-mono); }
+
+@media print {
+  .site-footer { display: none; }
+}

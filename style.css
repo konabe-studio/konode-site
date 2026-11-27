@@ -64,20 +64,6 @@ p { margin: 0; }
 
 /* The site header lives in header.css — it is shared with the doc pages. */
 
-/* The footer reuses the header's brand lockup. */
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  height: 44px;
-  font-family: var(--font-display);
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: -0.45px;
-  text-decoration: none;
-}
-.brand img { width: 26px; height: 26px; border-radius: var(--r-sm); }
-
 /* --------------------------------------------------------------- button -- */
 
 .btn {
@@ -1185,27 +1171,7 @@ table.compare td { color: var(--fg-muted); font-size: var(--fs-sm); }
 
 .compare .footnote { margin-top: var(--s-5); font-size: var(--fs-sm); max-width: none; }
 
-/* -------------------------------------------------------------- footer -- */
-
-.site-footer {
-  padding-block: var(--s-8) var(--s-6);
-}
-.footer-top {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--s-5);
-  align-items: center;
-  justify-content: space-between;
-}
-.footer-nav { display: flex; flex-wrap: wrap; gap: var(--s-5); }
-.footer-nav a { color: var(--fg-muted); font-size: var(--fs-sm); text-decoration: none; }
-.footer-nav a:hover { color: var(--fg); text-decoration: underline; }
-.footer-legal {
-  margin-top: var(--s-6);
-  color: var(--fg-muted);
-  font-size: var(--fs-xs);
-  text-align: center;
-}
+/* The footer lives in footer.css, shared with the doc pages. */
 
 /* ----------------------------------------------------------- responsive -- */
 

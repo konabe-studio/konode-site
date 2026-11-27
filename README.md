@@ -32,6 +32,7 @@ Stylesheets, and which pages load them:
 | --- | --- | --- |
 | `tokens.css` | all 5 pages, first | **every design token, declared once.** The only `:root` in the repo |
 | `header.css` | all 5 pages | the floating pill header and mobile menu — self-contained, uses no tokens |
+| `footer.css` | every page, after `header.css` | the one footer: the brand, three link groups (Guides, Install, Project) and the licence line. Uses the tokens |
 | `style.css` | `index.html` | the landing page rules, from the Figma variables |
 | `docs.css` | the 4 doc pages | the previous stylesheet, minus its old header rules |
 
