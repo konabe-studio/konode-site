@@ -55,31 +55,6 @@ img, svg { max-width: 100%; display: block; }
    position:fixed, so the page content needs to clear it. */
 body { padding-top: 96px; }
 
-/* The footer still carries a brand lockup of its own. */
-.brand {
-  display: inline-flex; align-items: center; gap: 10px;
-  font-family: var(--font-display); font-weight: 600; font-size: var(--fs-h3);
-  letter-spacing: -0.02em; color: var(--fg); text-decoration: none;
-}
-.brand svg, .brand img { width: 26px; height: 26px; border-radius: 6px; flex: none; }
-
-/* ---------- Footer ---------- */
-footer.site { border-top: 1px solid var(--border); padding: var(--s-7) 0; }
-footer.site .top {
-  display: flex; flex-direction: column; gap: var(--s-5);
-  justify-content: space-between; align-items: flex-start;
-}
-@media (min-width: 860px) { footer.site .top { flex-direction: row; align-items: center; } }
-footer.site .about { margin-top: var(--s-2); max-width: 44ch; font-size: var(--fs-sm); color: var(--fg-subtle); }
-footer.site .about b { font-weight: 400; color: var(--fg-muted); }
-footer.site .links {
-  display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-2) var(--s-5);
-  font-size: var(--fs-sm);
-}
-footer.site .links a { color: var(--fg-muted); text-decoration: none; }
-footer.site .links a:hover { color: var(--fg); text-decoration: underline; }
-footer.site .links .lic { font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--fg-subtle); }
-
 /* ---------- Long-form pages (privacy, setup, troubleshooting, roadmap) ---------- */
 /* The container itself carries the measure, so prose, code blocks and boxes
    all share one edge. Constraining the children instead left the black code
@@ -290,7 +265,7 @@ table.compat-text thead th { text-align: left; }
 }
 
 @media print {
-  .site-header, footer.site, .skip { display: none; }
+  .site-header, .skip { display: none; }
   /* padding-top clears the fixed header on screen; in print there is none. */
   body { background: #fff; color: #000; padding-top: 0; }
   .doc { padding: 0; }
